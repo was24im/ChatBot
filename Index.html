@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            margin: 0;
+        }
+        #chat-container {
+            width: 400px;
+            height: 600px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #chatbox {
+            flex: 1;
+            padding: 10px;
+            overflow-y: scroll;
+            border-bottom: 1px solid #eee;
+        }
+        .message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+            position: relative;
+        }
+        .user-message {
+            background-color: #0084ff;
+            color: #fff;
+            align-self: flex-end;
+        }
+        .bot-message {
+            background-color: #eee;
+            color: #333;
+            align-self: flex-start;
+        }
+        .delete-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -25px;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        #input-container {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #eee;
+        }
+        #userInput {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        #sendBtn {
+            padding: 10px 20px;
+            background-color: #0084ff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #sendBtn:hover {
+            background-color: #006bbf;
+        }
+        #clearBtn {
+            padding: 10px;
+            background-color: #ff4d4d;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        #clearBtn:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chatbox">
+            <div id="chatlog"></div>
+        </div>
+        <div id="input-container">
+            <input type="text" id="userInput" placeholder="Type your question here...">
+            <button id="sendBtn">Send</button>
+        </div>
+        <button id="clearBtn">Clear Chat</button>
+    </div>
+
+    <script src="chatbot.js"></script>
+</body>
+</html>
